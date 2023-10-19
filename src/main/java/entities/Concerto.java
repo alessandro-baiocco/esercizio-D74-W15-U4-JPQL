@@ -4,13 +4,15 @@ package entities;
 import enums.Genere;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "concerto")
 public class Concerto extends Event {
 
-
+    @Enumerated(EnumType.STRING)
     private Genere genere;
 
     private Boolean streaming;
@@ -39,6 +41,14 @@ public class Concerto extends Event {
 
     public void setStreaming(Boolean streaming) {
         this.streaming = streaming;
+    }
+
+    @Override
+    public String toString() {
+        return "Concerto{" +
+                "genere=" + genere +
+                ", streaming=" + streaming +
+                '}';
     }
 }
 

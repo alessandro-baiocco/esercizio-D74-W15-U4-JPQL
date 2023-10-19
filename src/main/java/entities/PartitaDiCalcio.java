@@ -76,4 +76,15 @@ public class PartitaDiCalcio extends Event {
     public void setGolOspite(int golOspite) {
         this.golOspite = golOspite;
     }
+
+    @Override
+    public String toString() {
+        return "PartitaDiCalcio{" +
+                "squadraCasa='" + squadraCasa + '\'' +
+                ", squadraOspite='" + squadraOspite + '\'' +
+                ", vincitore='" + vincitore + '\'' +
+                ", golSquadraCasa=" + golSquadraCasa +
+                ", golOspite=" + golOspite +
+                '}';
+    }
 }
